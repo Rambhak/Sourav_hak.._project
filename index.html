@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourav Web</title>
+    <link href="./images/logo.jpg" rel="icon" />
+    <!-- fa fa icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing:border-box;
+        }
+        #main{ /*main css*/
+            height: 160vh;width: 100vw;background-color: gray;
+        }
+        /* header css */
+        #header{
+            height: 10vh;background-color: white;
+            display: flex;justify-content: space-evenly;align-items: center;
+        }
+        #logo{
+            width: 20vw;
+            background-color: white;
+        }
+        #search{
+            width: 44vw;
+            background-color: white;
+        }
+        #menu{
+            width: 35vw;
+            background-color: white;
+        }
+        .header1{
+            height: 100%;
+            box-shadow: 0px 0px 3px gray;
+            border-radius: 2vh;
+        }
+        /* catagories css */
+        #catagories{
+            height: 20vh;background-color: white;
+            display: flex;justify-content: space-evenly;align-items: center;
+        }
+        .cat{
+            height: 16vh;width: 19vh;
+            background-color: white;
+            box-shadow: 0px 0px 3px gray;
+            border-radius: 2vh;
+            padding: 1vh;
+            display: flex;justify-content: center;align-items: center;
+        }
+        /* banner css */
+        #banner{
+            height: 35vh;background-color: white;
+            box-shadow: 0px 0px 3px gray;
+        }
+        /* product css */
+        #products{
+            height: 30vh;background-color: white;
+            display: flex;justify-content: space-evenly;align-items: center;
+        }
+        .prod{
+            height: 28vh;width: 28vh;
+            background-color: white;
+            box-shadow: 0px 0px 3px gray;
+            border-radius: 2vh;
+            display: flex;justify-content: center;align-items: center;padding: 1vh 1vw;
+        }
+        /* add css */
+        #add{
+            height: 40vh;background-color: white;
+            box-shadow: 0px 0px 3px gray;display: flex;justify-content: space-evenly;align-items: center;
+        }
+        .add-1{
+            height: 38vh;width: 19vw;box-shadow: 0px 0px 3px gray;
+        }
+        /* footer css */
+        #footer{
+            height: 15vh;background-color: black;
+            box-shadow: 0px 0px 3px gray;
+            display: flex;align-items: center;
+        }
+        /* notice css */
+        #notice{
+            height: 10vh;background-color: royalblue;
+            display: flex; justify-content: center;align-items: center;
+        }
+    </style>
+    <style>
+        /* logo */
+        #logo>#logoimg>img{
+            height: 100%;width: 100%;border-radius: 2vh;
+            display: flex;justify-content: center;align-items: center;
+        }
+        #logo>#logoimg{
+            height: 100%;width: 100%;padding: 2px;
+        }
+        /* menu bar */
+        #menu1{
+            height: 100%;width: 100%;
+            display: flex;justify-content: center;align-items: center;
+        }
+        #menu1>ul>li{
+            display: inline-block;list-style: none;background-color: orange;padding: 2vh 0vw;
+        }
+        #menu1>ul>li>a{
+            padding: 2vh 2vw;
+        }
+        #menu1 ul>li:hover{background-color: lightcoral;}
+        #menu1 ul>li>a{text-decoration: none;}
+        #about-sub-menu{
+            position: absolute;list-style: none;margin-top: 2.2vh;display: block;
+        }
+        #about-sub-menu1{
+            position: absolute;list-style: none;margin-left: 4.1vw;top: 0;display: block;
+        }
+        #about-sub-menu>li,#about-sub-menu1>li{
+            margin-top: 0.1vh;background-color: rgb(201, 41, 73);margin-left: 0.1vw;
+        }
+        #about-sub-menu>li>a,#about-sub-menu1>li>a{
+            color: white;
+        }
+        #about-sub-menu,#about-sub-menu1{
+           display: none;
+        }
+        #menu1>ul>li:hover>#about-sub-menu{
+            display: block;
+        }
+        #about-sub-menu>li:hover>#about-sub-menu1{
+            display: block;
+        }
+        
+        /* banner */
+        #banner1{
+            height: 100%;width: 100%;
+        }
+        #banner1>img{
+            height: 100%;width: 100%;border-radius: 1vh 1vw;
+        }
+
+        /* products */
+        .prod-child,.prod-img>img{
+            height: 100%;width: 100%;
+        }
+        .prod-img{
+            height: 20vh;width: 100%;
+            display: flex;justify-content: center;align-items: center;
+        }
+        .prod-det{
+            height: 6vh;width: 100%;
+        }
+        .prod-det-1,.prod-det-2{
+            height: 3vh;width: 100%;
+            display: flex;justify-content: center;align-items: center;
+        }
+        /* notice */
+        #notice>marquee>p{
+            font-size: 6vh;
+            color: orange;
+        }
+        /* footer */
+        #footer>p{
+            color: white;
+        }
+        /* add */
+        .add-1-img,.add-1-img>img{
+            height: 100%;width: 100%;box-shadow: 0px 0px 3px gray;
+        }
+        .add-1{
+            padding: 1vh 1vw;
+        }
+        /* search bar */
+        #search{
+            display: flex;justify-content: center;align-items: center;
+        }
+        #child-search>input{
+            height: 8vh; width: 20vw;
+        }
+        #child-search>label{
+            height: 8vh; width: 10vw;background-color: orange;
+            display: flex;justify-content: center;align-items: center;
+        }
+        #child-search>label>i{
+            font-size: 40px;
+        }
+        /* catagories */
+        .cat-1{
+            height: 100%;width: 100%;
+        }
+        .cat-img{
+            height: 10vh;width: 100%;
+        }
+        .cat-img>img{
+            height: 100%;width: 100%;
+        }
+        .cat-details{
+            height: 4vh;width: 100%;text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <!-- notice -->
+        <div id="notice">
+            <marquee direction="right" scrollamount="30" behavior="alternate">
+                <p>50% off for Army</p>
+            </marquee>
+        </div>
+        <!-- header part -->
+        <div id="header">
+            <!-- logo -->
+            <div id="logo" class="header1">
+                <div id="logoimg">
+                    <img src="./images/logo2.png" alt="logo" />
+                </div>
+            </div>
+            <!-- search bar -->
+            <div id="search" class="header1">
+                <div id="child-search" style="display: flex;justify-content: center;">
+                    <input type="text" placeholder="type your  text"/><br />
+                    <label ><i class="fa-solid fa-magnifying-glass" ></i></label>
+                </div>
+            </div>
+            <!-- menu bar -->
+            <div id="menu" class="header1">
+                <div id="menu1">
+                   <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li>
+                        <a href="./about.html">About <i class="fa fa-angle-down" style="font-size:15px"></i></a>
+                        <ul id="about-sub-menu">
+                            <li>
+                                <a href="">Cources <i class="fa fa-angle-right" style="font-size:10px"></i></a>
+                                <ul id="about-sub-menu1">
+                                    <li><a href="">python</a></li>
+                                    <li><a href="">C++</a></li>
+                                    <li><a href="">java</a></li>
+                                    <li><a href="">web development</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">projects</a></li>
+                            <li><a href="">industries</a></li>
+                            <li><a href="">partners</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li style="margin-left: 2vw;background-color: yellow;"><a href="./login.html">Login</a></li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- catagories part -->
+        <div id="catagories">
+            <div class="cat">
+                <div class="cat-1">
+                    <div class="cat-img">
+                        <img src="./images/prod-1.webp" />
+                    </div>
+                    <div class="cat-details">
+                        <p>Gown(Red)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-1">
+                    <div class="cat-img">
+                        <img src="./images/prod-2.webp" />
+                    </div>
+                    <div class="cat-details">
+                        <p>Watch</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-1">
+                    <div class="cat-img">
+                        <img src="./images/prod-3.webp" />
+                    </div>
+                    <div class="cat-details">
+                        <p>Gown</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-1">
+                    <div class="cat-img">
+                        <img src="./images/prod-4.webp" />
+                    </div>
+                    <div class="cat-details">
+                        <p>Chappal</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-1">
+                    <div class="cat-img">
+                        <img src="./images/prod-5.webp" />
+                    </div>
+                    <div class="cat-details">
+                        <p>Bottol</p>
+                    </div>
+                </div>
+            </div>
+            <div class="cat">
+                <div class="cat-1">
+                    <div class="cat-img">
+                        <img src="./images/prod-6.webp" />
+                    </div>
+                    <div class="cat-details">
+                        <p>Tab</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- banner part -->
+        <div id="banner">
+            <div id="banner1">
+                <img src="./images/banner.webp"/>
+            </div>
+        </div>
+
+
+        <!-- products part -->
+        <div id="products">
+            <div class="prod">
+                <div class="prod-child">
+                    <div class="prod-img">
+                        <img src="./images/prod-1.webp" alt="product-1"/>
+                    </div>
+                    <div class="prod-det">
+                        <div class="prod-det-1">
+                            <p>Gown(Red)</p>
+                        </div>
+                        <div class="prod-det-2">
+                            <p><b><del>1000/-</del>600/-</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prod">
+                <div class="prod-child">
+                    <div class="prod-img">
+                        <img src="./images/prod-2.webp" alt="product-1"/>
+                    </div>
+                    <div class="prod-det">
+                        <div class="prod-det-1">
+                            <p>Smart Watch</p>
+                        </div>
+                        <div class="prod-det-2">
+                            <p><b><del>3000/-</del>1999/-</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prod">
+                <div class="prod-child">
+                    <div class="prod-img">
+                        <img src="./images/prod-3.webp" alt="product-1"/>
+                    </div>
+                    <div class="prod-det">
+                        <div class="prod-det-1">
+                            <p>Gown</p>
+                        </div>
+                        <div class="prod-det-2">
+                            <p><b><del>800/-</del>437/-</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prod">
+                <div class="prod-child">
+                    <div class="prod-img">
+                        <img src="./images/prod-4.webp" alt="product-1"/>
+                    </div>
+                    <div class="prod-det">
+                        <div class="prod-det-1">
+                            <p>Chappal</p>
+                        </div>
+                        <div class="prod-det-2">
+                            <p><b><del>910/-</del>357/-</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prod">
+                <div class="prod-child">
+                    <div class="prod-img">
+                        <img src="./images/prod-5.webp" alt="product-1"/>
+                    </div>
+                    <div class="prod-det">
+                        <div class="prod-det-1">
+                            <p>Bottol</p>
+                        </div>
+                        <div class="prod-det-2">
+                            <p><b><del>399/-</del>250/-</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="prod">
+                <div class="prod-child">
+                    <div class="prod-img">
+                        <img src="./images/prod-6.webp" alt="product-1"/>
+                    </div>
+                    <div class="prod-det">
+                        <div class="prod-det-1">
+                            <p>Tab</p>
+                        </div>
+                        <div class="prod-det-2">
+                            <p><b><del>10000/-</del>9000/-</b></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- add part -->
+        <div id="add">
+            <div class="add-1">
+                <div class="add-1-img">
+                    <img src="./images/add-1.jpeg"/>
+                </div>
+            </div>
+            <div class="add-1">
+                <div class="add-1-img">
+                    <img src="./images/add-2.jpeg"/>
+                </div>
+            </div>
+            <div class="add-1">
+                <div class="add-1-img">
+                    <img src="./images/add-3.jpeg"/>
+                </div>
+            </div>
+            <div class="add-1">
+                <div class="add-1-img">
+                    <img src="./images/add-4.jpeg"/>
+                </div>
+            </div>
+            <div class="add-1">
+                <div class="add-1-img">
+                    <img src="./images/add-6.jpeg"/>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- footerr part -->
+        <div id="footer">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Sourav Mondal &copy; Sourav web</p> 
+        </div>
+    </div>
+</body>
+</html>

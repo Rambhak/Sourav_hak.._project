@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sourav Web</title>
+    <link href="./images/logo.jpg" rel="icon" />
+    <!-- fa fa icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        *{
+            margin: 0;padding: 0;box-sizing:border-box;
+        }
+        #main{ /*main css*/
+            height: 160vh;width: 100vw;background-color: gray;
+        }
+        /* header css */
+        #header{
+            height: 10vh;background-color: white;
+            display: flex;justify-content: space-evenly;align-items: center;
+        }
+        #logo{
+            width: 20vw;
+            background-color: white;
+        }
+        #search{
+            width: 44vw;
+            background-color: white;
+        }
+        #menu{
+            width: 35vw;
+            background-color: white;
+        }
+        .header1{
+            height: 100%;
+            box-shadow: 0px 0px 3px gray;
+            border-radius: 2vh;
+        }
+        /* about */
+        #about{
+            height: 125vh;width: 100vw;
+            background-color: white;
+        }
+        /* banner css */
+        #banner{
+            height: 40vh;width: 100vw;background-color: white;
+            box-shadow: 0px 0px 3px gray;
+        }
+        #dtails{
+            height: 85vh;width: 100vw;background-color: white;
+            box-shadow: 0px 0px 3px gray;display: flex;justify-content: center;align-items: center;
+        }
+        #dtails-center{
+            height: 100%;width: 100%;box-shadow: 0px 0px 3px gray;padding: 2vh 1vw;
+        }
+        #dtails-top,#dtails-bottom{
+            height: 41vh;width: 100%;box-shadow: 0px 0px 3px white;
+        }
+        #dtails-top{
+            display: flex;justify-content: center;align-items: center;
+        }
+        #dtails-top-left,#dtails-top-right{
+            height: 100%;box-shadow: 0px 0px 3px white;
+        }
+        #dtails-top-right{
+            width: 60vw;padding: 4vh 2vw 0vh 2vw;
+        }
+        #dtails-top-right>p{
+            text-align: justify;
+        }
+        #dtails-bottom{
+            padding: 1vh 2vw 0vh 1vw;
+        }
+        #dtails-bottom>p{
+            text-align: justify;
+        }
+        #dtails-top-left{
+            width: 38vw; padding: 1vh 1vw;
+        }
+        /* footer css */
+        #footer{
+            height: 15vh;background-color: black;
+            box-shadow: 0px 0px 3px gray;
+            display: flex;align-items: center;
+        }
+        /* notice css */
+        #notice{
+            height: 10vh;background-color: royalblue;
+            display: flex; justify-content: center;align-items: center;
+        }
+    </style>
+    <style>
+        /* logo */
+        #logo>#logoimg>img{
+            height: 100%;width: 100%;border-radius: 2vh;
+            display: flex;justify-content: center;align-items: center;
+        }
+        #logo>#logoimg{
+            height: 100%;width: 100%;padding: 2px;
+        }
+        /* menu bar */
+        #menu1{
+            height: 100%;width: 100%;
+            display: flex;justify-content: center;align-items: center;
+        }
+        #menu1>ul>li{
+            display: inline-block;list-style: none;background-color: orange;padding: 2vh 0vw;
+        }
+        #menu1>ul>li>a{
+            padding: 2vh 2vw;
+        }
+        #menu1 ul>li:hover{background-color: lightcoral;}
+        #menu1 ul>li>a{text-decoration: none;}
+        #about-sub-menu{
+            position: absolute;list-style: none;margin-top: 2.2vh;display: block;
+        }
+        #about-sub-menu1{
+            position: absolute;list-style: none;margin-left: 4.1vw;top: 0;display: block;
+        }
+        #about-sub-menu>li,#about-sub-menu1>li{
+            margin-top: 0.1vh;background-color: rgb(201, 41, 73);margin-left: 0.1vw;
+        }
+        #about-sub-menu>li>a,#about-sub-menu1>li>a{
+            color: white;
+        }
+        #about-sub-menu,#about-sub-menu1{
+           display: none;
+        }
+        #menu1>ul>li:hover>#about-sub-menu{
+            display: block;
+        }
+        #about-sub-menu>li:hover>#about-sub-menu1{
+            display: block;
+        }
+
+        /* banner */
+        #banner1{
+            height: 100%;width: 100%;
+        }
+        #banner1>img{
+            height: 100%;width: 100%;border-radius: 1vh 1vw;
+        }
+
+        /* notice */
+        #notice>marquee>p{
+            font-size: 6vh;
+            color: orange;
+        }
+        /* footer */
+        #footer>p{
+            color: white;
+        }
+        
+        /* search bar */
+        #search{
+            display: flex;justify-content: center;align-items: center;
+        }
+        #child-search>input{
+            height: 8vh; width: 20vw;
+        }
+        #child-search>label{
+            height: 8vh; width: 10vw;background-color: orange;
+            display: flex;justify-content: center;align-items: center;
+        }
+        #child-search>label>i{
+            font-size: 40px;
+        }
+        /* details */
+        #dtails-top-left>img{
+            height: 100%;width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        <!-- notice -->
+        <div id="notice">
+            <marquee direction="right" scrollamount="30" behavior="alternate">
+                <p>50% off for Army</p>
+            </marquee>
+        </div>
+        <!-- header part -->
+        <div id="header">
+            <!-- logo -->
+            <div id="logo" class="header1">
+                <div id="logoimg">
+                    <img src="./images/logo2.png" alt="logo" />
+                </div>
+            </div>
+            <!-- search bar -->
+            <div id="search" class="header1">
+                <div id="child-search" style="display: flex;justify-content: center;">
+                    <input type="text" placeholder="type your  text"/><br />
+                    <label ><i class="fa-solid fa-magnifying-glass" ></i></label>
+                </div>
+            </div>
+            <!-- menu bar -->
+            <div id="menu" class="header1">
+                <div id="menu1">
+                   <ul>
+                    <li><a href="./index.html">Home</a></li>
+                    <li>
+                        <a href="./about.html">About <i class="fa fa-angle-down" style="font-size:15px"></i></a>
+                        <ul id="about-sub-menu">
+                            <li>
+                                <a href="">Cources <i class="fa fa-angle-right" style="font-size:10px"></i></a>
+                                <ul id="about-sub-menu1">
+                                    <li><a href="">python</a></li>
+                                    <li><a href="">C++</a></li>
+                                    <li><a href="">java</a></li>
+                                    <li><a href="">web development</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="">projects</a></li>
+                            <li><a href="">industries</a></li>
+                            <li><a href="">partners</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="./contact.html">Contact</a></li>
+                    <li style="margin-left: 2vw;background-color: yellow;"><a href="./login.html">Login</a></li>
+                   </ul>
+                </div>
+            </div>
+        </div>
+        <div id="about">
+            <!-- banner part -->
+            <div id="banner">
+                <div id="banner1">
+                    <img src="./images/banner.webp"/>
+                </div>
+            </div>
+            <div id="dtails">
+                <div id="dtails-center">
+                    <div id="dtails-top">
+                        <div id="dtails-top-left">
+                            <img src="./images/add-5.jpeg" alt="pic of burger">
+                        </div>
+                        <div id="dtails-top-right">
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Molestiae dolores sed quae corporis minima nemo, 
+                                facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                                unde cumque. Fuga, laudantium architecto.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Molestiae dolores sed quae corporis minima nemo, 
+                                facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                                unde cumque. Fuga, laudantium architecto.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Molestiae dolores sed quae corporis minima nemo, 
+                                facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                                unde cumque. Fuga, laudantium architecto.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Molestiae dolores sed quae corporis minima nemo, 
+                                facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                                unde cumque. Fuga, laudantium architecto.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Molestiae dolores sed quae corporis minima nemo, 
+                                facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                                unde cumque. Fuga, laudantium architecto.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Molestiae dolores sed quae corporis minima nemo, 
+                                facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                                unde cumque. Fuga, laudantium architecto.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Molestiae dolores sed quae corporis minima nemo, 
+                                facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                                unde cumque. Fuga, laudantium architecto.
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                Molestiae dolores sed quae corporis minima nemo, 
+                                facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                                unde cumque. Fuga, laudantium architecto.
+                            </p>
+                        </div>
+                    </div>
+                <div id="dtails-bottom">
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quidem ea corrupti quasi libero accusantium explicabo dicta quisquam laudantium, 
+                        unde in. Nostrum libero saepe minus quod ullam quas corporis voluptatibus quasi!
+                        facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                        unde cumque. Fuga, laudantium architecto.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Molestiae dolores sed quae corporis minima nemo, 
+                        facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                        unde cumque. Fuga, laudantium architecto. 
+                        Nostrum libero saepe minus quod ullam quas corporis voluptatibus quasi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quidem ea corrupti quasi libero accusantium explicabo dicta quisquam laudantium, 
+                        unde in. 
+                        Quidem ea corrupti quasi libero accusantium explicabo dicta quisquam laudantium, 
+                        unde in. Nostrum libero saepe minus quod ullam quas corporis voluptatibus quasi!
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                        Quidem ea corrupti quasi libero accusantium explicabo dicta quisquam laudantium, 
+                        unde in. Quidem ea corrupti quasi libero accusantium explicabo dicta quisquam laudantium, 
+                        unde in. Nostrum libero saepe minus quod ullam quas corporis voluptatibus quasi!
+                        facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                        unde cumque. Fuga, laudantium architecto.
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                        Molestiae dolores sed quae corporis minima nemo, 
+                        facere magni fugiat voluptas, exercitationem ipsa neque nisi itaque natus, 
+                        unde cumque.
+                    </p>
+                </div>
+                </div>
+            </div>
+        </div>
+        <!-- footerr part -->
+        <div id="footer">
+            <p>&nbsp;&nbsp;&nbsp;&nbsp;Sourav Mondal &copy; Sourav web</p> 
+        </div>
+    </div>
+</body>
+</html>
